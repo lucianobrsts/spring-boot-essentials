@@ -10,3 +10,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 > ### SPRING BOOT ESSENTIALS:
 
 - **01. Setup do Projeto**
+- **02. @Component, @Autowired e @SpringBootApplication**
