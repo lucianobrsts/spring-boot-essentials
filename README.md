@@ -11,3 +11,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 
 - **01. Setup do Projeto**
 - **02. @Component, @Autowired e @SpringBootApplication**
+- **03. Configurando hot swap**
