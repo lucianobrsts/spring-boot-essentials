@@ -1,5 +1,6 @@
 package br.com.devdojo.endpoint;
 
+import br.com.devdojo.error.CustomErrorType;
 import br.com.devdojo.model.Studant;
 import br.com.devdojo.util.DateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,10 @@ public class StudanteEndPoint {
         Studant studant = new Studant();
         studant.setId(id);
         int index = Studant.studantList.indexOf(studant);
-        if(index == -1)
+        if(index == -1) {
+            return new ResponseEntity<>(new CustomErrorType("Estudent not found"), HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(Studant.studantList.get(index), HttpStatus.OK);
     }
 
 }

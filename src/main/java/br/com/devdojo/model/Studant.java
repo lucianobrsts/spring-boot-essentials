@@ -2,6 +2,7 @@ package br.com.devdojo.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static java.util.Arrays.asList;
 
@@ -27,7 +28,20 @@ public class Studant {
     }
 
     private static void studentRepository() {
-        studantList = new ArrayList<>(asList(new Studant("Deku"), new Studant("Todoroki")));
+        studantList = new ArrayList<>(asList(new Studant(1, "Deku"), new Studant(2, "Todoroki")));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Studant studant = (Studant) o;
+        return id == studant.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     public int getId() {
