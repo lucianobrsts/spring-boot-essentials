@@ -14,5 +14,6 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **03. Configurando hot swap**
 - **04. Setup do projeto com Spring Initializr**
 - **05. Padrão REST e POST**
-- **05. Padrão REST e POST 2**
-- **05. Padrão REST, PUT e DELETE 3**
+- **06. Padrão REST e POST 2**
+- **07. Padrão REST, PUT e DELETE 3**
+- **08. Adicionando Spring Data JPA com MySQL**
