@@ -1,4 +1,4 @@
-package br.com.devdojo.awesome;
+package br.com.devdojo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
