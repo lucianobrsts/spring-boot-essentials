@@ -15,3 +15,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **04. Setup do projeto com Spring Initializr**
 - **05. Padrão REST e POST**
 - **05. Padrão REST e POST 2**
+- **05. Padrão REST, PUT e DELETE 3**
