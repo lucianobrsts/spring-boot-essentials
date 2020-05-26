@@ -28,7 +28,7 @@ public class Studant {
     }
 
     private static void studentRepository() {
-        studantList = new ArrayList<>(asList(new Studant(1, "Deku"), new Studant(2, "Todoroki")));
+        studantList = new ArrayList<>(asList(new Studant(1, "Deku"), new Studant(2, "Todoroki"), new Studant(3, "Luciano Brito")));
     }
 
     @Override
