@@ -53,23 +53,25 @@ public class ValidationErrorDetails extends ErrorDetail{
             return this;
         }
 
-        public Builder field(String fieldMessage) {
+        public Builder fieldMessage(String fieldMessage) {
             this.fieldMessage = fieldMessage;
             return this;
         }
 
-        public Builder fieldMessage(String field) {
+        public Builder field(String field) {
             this.field = field;
             return this;
         }
 
         public ValidationErrorDetails build() {
             ValidationErrorDetails validationErrorDetails = new ValidationErrorDetails();
-            validationErrorDetails.setDetail(detail);
-            validationErrorDetails.setTitle(title);
-            validationErrorDetails.setStatus(status);
-            validationErrorDetails.setTimestamp(timestamp);
             validationErrorDetails.setDeveloperMessage(developerMessage);
+            validationErrorDetails.setTitle(title);
+            validationErrorDetails.setDetail(detail);
+            validationErrorDetails.setTimestamp(timestamp);
+            validationErrorDetails.setStatus(status);
+            validationErrorDetails.fieldMessage = fieldMessage;
+            validationErrorDetails.field = field;
             return validationErrorDetails;
         }
     }
