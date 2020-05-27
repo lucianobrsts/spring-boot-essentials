@@ -19,3 +19,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **08. Adicionando Spring Data JPA com MySQL**
 - **09. Adicionando Spring Data JPA com MySQL 2**
 - **10. Tratamento de Erros em REST**
+- **11. Tratamento de Erros em REST - Exception Handler**
