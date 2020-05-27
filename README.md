@@ -22,5 +22,6 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **11. Tratamento de Erros em REST - Exception Handler**
 - **12. Tratamento de Erros em REST - Transações**
 - **13. Tratamento de Erros em REST - Validação de Campos**
-- **13. Tratamento de Erros em REST - Padronizando todos os Erros**
-- **14. Paginação em Requisições REST**
+- **14. Tratamento de Erros em REST - Padronizando todos os Erros**
+- **15. Paginação em Requisições REST**
+- **16. Ordenação em Requisições REST**
