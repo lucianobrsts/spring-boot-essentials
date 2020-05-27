@@ -10,6 +10,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("studants")
 public class StudanteEndPoint {
@@ -40,7 +42,7 @@ public class StudanteEndPoint {
 
     @PostMapping
     @Transactional(rollbackFor = Exception.class)
-    public ResponseEntity<?> save(@RequestBody Studant studant) {
+    public ResponseEntity<?> save(@Valid @RequestBody Studant studant) {
         return new ResponseEntity<>(studantDAO.save(studant), HttpStatus.CREATED);
     }
 
