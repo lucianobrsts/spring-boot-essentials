@@ -17,3 +17,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **06. Padrão REST e POST 2**
 - **07. Padrão REST, PUT e DELETE 3**
 - **08. Adicionando Spring Data JPA com MySQL**
+- **09. Adicionando Spring Data JPA com MySQL 2**
