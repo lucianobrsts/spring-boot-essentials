@@ -25,4 +25,5 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **14. Tratamento de Erros em REST - Padronizando todos os Erros**
 - **15. Paginação em Requisições REST**
 - **16. Ordenação em Requisições REST**
-- **16. Spring Security - Autenticação e Autorização**
+- **17. Spring Security - Autenticação e Autorização**
+- **18. Spring Security - Autenticação e Autorização com Spring Data**
