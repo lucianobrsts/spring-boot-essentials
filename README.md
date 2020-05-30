@@ -28,3 +28,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **17. Spring Security - Autenticação e Autorização**
 - **18. Spring Security - Autenticação e Autorização com Spring Data**
 - **19. Spring Security - Proteção das URLs com AntMatcher**
+- **20. Spring Security - Exemplo de Conexão Usando Java Puro**
