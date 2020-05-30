@@ -1,6 +1,5 @@
 package br.com.devdojo.endpoint;
 
-import br.com.devdojo.error.CustomErrorType;
 import br.com.devdojo.error.ResourceNotFoundException;
 import br.com.devdojo.model.Studant;
 import br.com.devdojo.repository.StudantRepository;
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("studants")
+@RequestMapping("v1")
 public class StudanteEndPoint {
     private final StudantRepository studantDAO;
 
@@ -27,38 +26,38 @@ public class StudanteEndPoint {
         this.studantDAO = studantDAO;
     }
 
-    @GetMapping
+    @GetMapping(path = "protected/studants/")
     public ResponseEntity<?> listAll(Pageable pageable) {
         return new ResponseEntity<>(studantDAO.findAll(pageable), HttpStatus.OK);
     }
 
-    @GetMapping(path = "/{id}")
+    @GetMapping(path = "protected/studants/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable("id") Long id, @AuthenticationPrincipal UserDetails userDetails) {
         verifyIfStudantExists(id);
         Studant studant = studantDAO.findOne(id);
         return new ResponseEntity<>(studant, HttpStatus.OK);
     }
 
-    @GetMapping(path = "/findByName/{name}")
+    @GetMapping(path = "protected/studants/findByName/{name}")
     public ResponseEntity<?> findStudantsByName(@PathVariable String name) {
         return new ResponseEntity<>(studantDAO.findByNameIgnoreCaseContaining(name), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping(path = "admin/studants/")
     @Transactional(rollbackFor = Exception.class)
     public ResponseEntity<?> save(@Valid @RequestBody Studant studant) {
         return new ResponseEntity<>(studantDAO.save(studant), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(path = "/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @DeleteMapping(path = "admin/studants/{id}")
+//    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         verifyIfStudantExists(id);
         studantDAO.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @PutMapping
+    @PutMapping(path = "admin/studants/")
     public ResponseEntity<?> update(@RequestBody Studant studant) {
         verifyIfStudantExists(studant.getId());
         studantDAO.save(studant);
