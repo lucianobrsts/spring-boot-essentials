@@ -15,6 +15,14 @@ public class Studant extends AbstractEntity{
     @Email
     private String email;
 
+    @Override
+    public String toString() {
+        return "Studant{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
     public String getName() {
         return name;
     }
