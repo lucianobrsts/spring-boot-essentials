@@ -17,13 +17,16 @@ public class JavaSpringClientTest {
     public static void main(String[] args) {
 
         Studant studantPost = new Studant();
-        studantPost.setName("John Wick");
+        studantPost.setName("John Wick 2");
         studantPost.setEmail("john@pencil.com");
+        studantPost.setId(29L);
         JavaClientDAO dao = new JavaClientDAO();
 
-        System.out.println(dao.findById(1));
-        System.out.println(dao.listAll());
-        System.out.println(dao.save(studantPost));
+//        System.out.println(dao.findById(111));
+//        System.out.println(dao.listAll());
+//        System.out.println(dao.save(studantPost));
+//        dao.update(studantPost);
+        dao.delete(29L);
     }
 
 }
