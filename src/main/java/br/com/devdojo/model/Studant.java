@@ -12,8 +12,16 @@ public class Studant extends AbstractEntity{
     private String name;
 
     @NotEmpty
-    @Email
+    @Email(message = "Digite um email válido.")
     private String email;
+
+    public Studant() {
+    }
+
+    public Studant(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
     @Override
     public String toString() {

@@ -33,3 +33,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **22. Cliente Spring com RestTemplate GET Pageable**
 - **23. Cliente Spring com RestTemplate POST**
 - **24. Cliente Spring com RestTemplate PUT e DELETE**
+- **25. Testes Unitários para o Repositório com @DataJpaTest**
