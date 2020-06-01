@@ -30,3 +30,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **19. Spring Security - Proteção das URLs com AntMatcher**
 - **20. Exemplo de Conexão Usando Java Puro**
 - **21. Cliente Spring com RestTemplate GET**
+- **22. Cliente Spring com RestTemplate GET Pageable**
