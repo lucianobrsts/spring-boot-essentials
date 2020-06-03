@@ -28,6 +28,7 @@ public class StudanteEndPoint {
 
     @GetMapping(path = "protected/studants/")
     public ResponseEntity<?> listAll(Pageable pageable) {
+        System.out.println(studantDAO.findAll());
         return new ResponseEntity<>(studantDAO.findAll(pageable), HttpStatus.OK);
     }
 
