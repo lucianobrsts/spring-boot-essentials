@@ -37,3 +37,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **26. Atualizando SpringBoot e Resolvendo Bugs de Importação**
 - **27. Testes de Integração com MockMVC, Mockito e AssertJ**
 - **28. Testes de Integração com MockMVC, Mockito e AssertJ 2**
+- **29. Executando Springboot como Serviço Init**
