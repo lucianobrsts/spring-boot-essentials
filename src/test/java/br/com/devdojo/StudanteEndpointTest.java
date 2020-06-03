@@ -3,6 +3,7 @@ package br.com.devdojo;
 import br.com.devdojo.model.Studant;
 import br.com.devdojo.repository.StudantRepository;
 import org.assertj.core.api.Assertions;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
@@ -22,6 +23,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import static org.springframework.http.HttpMethod.DELETE;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -46,6 +48,12 @@ public class StudanteEndpointTest {
         public RestTemplateBuilder restTemplateBuilder() {
             return new RestTemplateBuilder().basicAuthorization("toyo", "devdojo");
         }
+    }
+
+    @Before
+    public void setup() {
+        Studant studant = new Studant(1L, "Legolas", "legolas@lotr.com");
+        BDDMockito.when(studantRepository.findOne(studant.getId())).thenReturn(studant);
     }
 
     @Test
@@ -76,9 +84,7 @@ public class StudanteEndpointTest {
 
     @Test
     public void getStudantByIdWhenUsernameAndPasswordAreCorrectShouldREturnStatusCode200() {
-        Studant studant = new Studant(1L, "Legolas", "legolas@lotr.com");
-        BDDMockito.when(studantRepository.findOne(studant.getId())).thenReturn(studant);
-        ResponseEntity<String> response = restTemplate.getForEntity("/v1/protected/studants/{id}", String.class, studant.getId());
+        ResponseEntity<String> response = restTemplate.getForEntity("/v1/protected/studants/{id}", String.class, 1L);
         Assertions.assertThat(response.getStatusCodeValue()).isEqualTo(200);
     }
 
@@ -88,4 +94,17 @@ public class StudanteEndpointTest {
         Assertions.assertThat(response.getStatusCodeValue()).isEqualTo(404);
     }
 
+    @Test
+    public void deleteWhenUserhasroleAdminAdnStudantExistsShouldReturnStatusCode200() {
+        BDDMockito.doNothing().when(studantRepository).delete(1L);
+        ResponseEntity<String> exchange = restTemplate.exchange("/v1/admin/studants/{id}", DELETE, null, String.class, 1L);
+        Assertions.assertThat(exchange.getStatusCodeValue()).isEqualTo(200);
+    }
+
+    @Test
+    public void deleteWhenUserhasroleAdminAdnStudantDoesNotExistsShouldReturnStatusCode404() {
+        BDDMockito.doNothing().when(studantRepository).delete(1L);
+//        ResponseEntity<String> exchange = restTemplate.exchange("/v1/admin/studants/{id}", DELETE, null, String.class, -1L);
+//        Assertions.assertThat(exchange.getStatusCodeValue()).isEqualTo(404);
+    }
 }
