@@ -39,3 +39,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **28. Testes de Integração com MockMVC, Mockito e AssertJ 2**
 - **29. Executando Springboot como Serviço Init**
 - **30. Spring Security - JWTToken Authentication**
+- **31. Spring Security - CORS**

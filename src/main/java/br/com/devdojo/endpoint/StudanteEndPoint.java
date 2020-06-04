@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,7 +34,8 @@ public class StudanteEndPoint {
     }
 
     @GetMapping(path = "protected/studants/{id}")
-    public ResponseEntity<?> getStudentById(@PathVariable("id") Long id, @AuthenticationPrincipal UserDetails userDetails) {
+    public ResponseEntity<?> getStudentById(@PathVariable("id") Long id, Authentication authentication) {
+        System.out.println(authentication);
         verifyIfStudantExists(id);
         Studant studant = studantDAO.findOne(id);
         return new ResponseEntity<>(studant, HttpStatus.OK);
