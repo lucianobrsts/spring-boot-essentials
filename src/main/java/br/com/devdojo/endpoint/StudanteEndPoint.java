@@ -3,6 +3,9 @@ package br.com.devdojo.endpoint;
 import br.com.devdojo.error.ResourceNotFoundException;
 import br.com.devdojo.model.Studant;
 import br.com.devdojo.repository.StudantRepository;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -27,9 +30,14 @@ public class StudanteEndPoint {
         this.studantDAO = studantDAO;
     }
 
-    @GetMapping(path = "protected/studants/")
+    @GetMapping(path = "admin/studants")
+    @ApiOperation(value = "Return a list with all studants", response = Studant[].class)
+
+//Configuração local para pegar token na documentação
+//    @ApiImplicitParams({
+//            @ApiImplicitParam(name = "Authorization", value = "Bearer token", required = true, dataType = "string", paramType = "header")
+//    })
     public ResponseEntity<?> listAll(Pageable pageable) {
-        System.out.println(studantDAO.findAll());
         return new ResponseEntity<>(studantDAO.findAll(pageable), HttpStatus.OK);
     }
 

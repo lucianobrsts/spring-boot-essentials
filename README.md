@@ -41,3 +41,4 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 - **30. Spring Security - JWTToken Authentication**
 - **31. Spring Security - CORS**
 - **32. Refatoração dos Testes para Executar com Token**
+- **33. Documentation With Swagger2 And SpringFox**
