@@ -9,9 +9,9 @@ Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais info
 
 > ### SPRING BOOT ESSENTIALS 2:
 
-- **01. O que é Spring Boot**
-- **02. @Component, @Autowired e @SpringBootApplication**
-- **03. Configurando hot swap**
+- **01. O que � Spring Boot**
+- **02. Criando projeto na pedreiragem pt 01**
+- **03. Criando projeto na pedreiragem pt 02**
 - **04. Setup do projeto com Spring Initializr**
 - **05. Padrão REST e POST**
 - **06. Padrão REST e POST 2**
