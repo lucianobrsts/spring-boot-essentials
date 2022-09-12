@@ -3,13 +3,13 @@
 # Curso Spring Boot DevDojo
 
 Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais informações acesse o curso no youtube, segue link abaixo.
-* [Acesse as aulas do DevDojo clicando aqui](https://www.youtube.com/watch?v=R-F-UcDo_5I&list=PL62G310vn6nF3gssjqfCKLpTK2sZJ_a_1)
+* [Acesse as aulas do DevDojo clicando aqui](https://www.youtube.com/watch?v=bCzsSXE4Jzg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H)
 
 ## Ementa do Curso
 
-> ### SPRING BOOT ESSENTIALS:
+> ### SPRING BOOT ESSENTIALS 2:
 
-- **01. Setup do Projeto**
+- **01. O que é Spring Boot**
 - **02. @Component, @Autowired e @SpringBootApplication**
 - **03. Configurando hot swap**
 - **04. Setup do projeto com Spring Initializr**
