@@ -1,1 +1,41 @@
+# Compiled class file
+*.class
+*target/*
+*/node_modules/*
+*${project.build.directory}/*
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Log file
+*.log
+
+# Package Files #
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.sql
+*rebel.xml
+*.iml
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+\.svn/
+
+*.factorypath
+*.classpath
+*.project
+*.settings
 /target/
+.pmd
+/.dbeaver-data-sources.xml
+.metadata/*
+*.iml
+*.idea
+*.tern-project
+
+c:*
+C:*
