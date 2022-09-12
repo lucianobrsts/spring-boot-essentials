@@ -1,4 +1,4 @@
-<img src="src/img/springdevdojo.jpeg" align="right" width="300">
+<img src="src/img/springdevdojo.png" align="right" width="300">
 
 # Curso Spring Boot DevDojo
 
