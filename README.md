@@ -1,6 +1,6 @@
 <img src="src/img/springdevdojo.png" align="right" width="300">
 
-# Curso Spring Boot DevDojo
+# Curso Spring Boot 2 Essentials DevDojo 
 
 Lista do conteúdo relevante a todo curso Spring Boot Essentials. Para mais informações acesse o curso no youtube, segue link abaixo.
 * [Acesse as aulas do DevDojo clicando aqui](https://www.youtube.com/watch?v=bCzsSXE4Jzg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3VA5H)
